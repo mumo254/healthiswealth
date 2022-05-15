@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app.apps.AppConfig',
-    'bootstrap5',
+    'bootstrap4',
     'cloudinary',
     'crispy_forms',
     'tinymce',
@@ -94,9 +94,9 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dave',
-        'USER': 'code_monkey',
-        'PASSWORD': 'gerrit',
+        'NAME': 'healthwise',
+        'USER': 'dave',
+        'PASSWORD': 'squidward',
     }
 }
 

@@ -1,4 +1,4 @@
-{%extends 'all-temps/base.html'%} {% block content %} {{block.super}}
+{%extends 'all-temps/base.html'%} {% block content %} {{block.super}} {% load static %}
 <style>
   * {
     margin: 0;
@@ -73,26 +73,86 @@
     background-color: transparent;
     padding-top: 3%;
   }
+/*-------------course--------*/
+  .course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+ .course h1{
+    font-size:36px;
+    font-weight:500;
+}
+.course p{
+    color:#000000;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 22px;
+    padding:10px;
+}
+
+
+  .row{
+    margin-top: 5%;
+    display: inline-flex;
+    flex-direction:row; 
+    justify-content: space-between;
+   
+    }
+.course-col{
+    flex-basis:31%;
+    background:#B4E197;
+    border-radius:10px;
+    margin-bottom:5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+
+}
+.course-col img{
+    width:80%;
+    height:30vh;
+}
+h3{
+    text-align:center;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.3);
+}
+@media(max-width: 1000px){
+    .row{flex-direction:column;
+    }
+    .contt img{
+      height:30vh;
+    }
+}
+
 </style>
 
 <div class="contt"
-  style="background-image: url('https://neo-nutritionsol.co.ke/wp-content/uploads/2020/09/Neo-nutrition-diet-scaled.jpg');background-repeat: no-repeat;background-size: cover;width: 100%; min-height: 100vh;">
+  style="background-image: url('https://neo-nutritionsol.co.ke/wp-content/uploads/2020/09/Neo-nutrition-diet-scaled.jpg');background-repeat: no-repeat;background-size: cover;width: 100%; min-height: 100vh;@media(max-width: 1000px){
+    .contt img{
+      height:30vh;
+    }
+}">
   <div class="container cont">
     <div class="uno" >
-      <div class="card-body" style="padding-top:30%;">
+      <div class="card-body" style="padding-top:30%;margin-left:1%;margin-right:13%">
         <div class="border" style="border: 2px solid black;padding: 5%; background-color: black;opacity: 0.7;">
-        <h3 class="card-title" style="color:#357C3C;font-family: Playball;font-size: 400%;">We Care About Your Health.</h3>
+        <h3 class="card-title" style="color:#357C3C;font-family: Playball;font-size: 300%;">We Care About Your Health.</h3>
         <p class="card-text" style="font-size: 200%;color: #fff;">Our main goal is to bring in positive deviation to nutrition and promotion of a healthy lifestyle.</p>
-        <a href="#" class="btn btn-success" style="color: #fff; width: 10rem;height: 8vh; padding-top: 2%;margin-left: 30%; ">
+        <a href="#" class="btn btn-success" style="color: #fff; width: 10rem;height: 7vh; padding-top: 2%;margin-left: 30%; ">
           Buy Now</a>
         </div>
       </div>
     </div>
   </div>
 </div>
-<div class="container con">
+<div class="container con" >
   <div class="dos" style="width: 18rem;">
-    <div class="card-img-top" style="width: 40%;margin-left: 30%;"><svg xmlns="http://www.w3.org/2000/svg"
+    <div class="card-img-top" style="width:30%;margin-left: 30%;margin-top:10%;"><svg xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 640 512">
         <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
         <path
@@ -100,8 +160,7 @@
         </svg></div>
     <div class="card-body">
       <h5 class="card-title" style="color:#357C3C;font-family: Playball;">Fast Deliveries</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
+      <p class="card-text">We deliver to your convenience. Within the capital, delivery is withhin 24 hours upon purchase.</p>
     </div>
   </div>
   <div class="card dos" style="width: 18rem;">
@@ -113,8 +172,7 @@
         </svg></div>
     <div class="card-body">
       <h5 class="card-title" style="color:#357C3C;font-family: Playball;">Safe Payments</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
+      <p class="card-text">we accept Mpesa payments thus paymet is at the comfort of your home.</p>
     </div>
   </div>
   <div class="card dos" style="width: 18rem;">
@@ -126,19 +184,45 @@
         </svg></div>
     <div class="card-body">
       <h5 class="card-title" style="color:#357C3C;font-family: Playball;">Shop with confidence</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
+      <p class="card-text">We have built a very good relationship with our clients  to ensure that you as our customer have the atmost confidence while shopping with us</p>
     </div>
   </div>
 </div>
 
+
+<!---------------course---------------->
+<section class="course">
+  <h1>Our best products</h1><br>
+  <p>Products and services you can enjoy within A dollhouse</p>
+    
+  <div class="row">
+    <div class="course-col">
+        <h3>Beverages</h3>
+        <img src="{%static 'image/coffee.png' %}" alt="error">
+        <p>  Get yourself a good morning beverage.<br>Cappiccino,latte,Original,sugarfree, all to make you the perfect breakfast</p>
+     </div>
+     <div class="course-col">
+      <h3>Fruit supplements</h3>
+      <img src="https://i0.wp.com/www.recsmedix.com/wp-content/uploads/2018/03/images__6_-removebg-preview.png?fit=225%2C225&ssl=1" alt="error">
+      <p>The best fruit supplements enriched with vitamins such as vitamin A,B,C,D,E and vitamin K.</p>
+     </div>
+ 
+    <div class="course-col">
+      <h3>Weight loss products</h3>
+      <img src="{%static 'image/burnslim.png' %}"alt="error" style="height:30vh;">
+      <p> Are you interested in losing some callories?? Worry no more. <br> Our weight loss products are guaranteed to help you acheive that with ease.</p>
+  </div>
+ </div>
+<p>In addition to the products above , we also have othe products whih are available in the shop page </p>
+<a href="http://127.0.0.1:8000/shop/" class="btn btn-success" style="color: #fff;">Purchase Now</a>
+</section>
+
 <div class="container purchase" style="margin-top: 3%;margin-bottom: 3%;">
   <span class="car"></span>
-  <div class="card tres" style="width: 28rem;border: 1px solid grey; background-color: black;opacity: 0.7;">
+  <div class="card tres" style="width: 28rem;border: 1px solid grey; background-color: black;opacity: 0.7;margin-left:5%;">
     <div class="card-body">
-      <h5 class="card-title" style="color: orange;">Holiday Sales</h5>
-      <h3 class="card-title" style="color:#357C3C;font-family: Playball;font-weight: 900; font-size: xx-large;">Sales
-        Upto 50%</h3>
+      <h5 class="card-title" style="color: orange;">Guaranteed products</h5>
+      <h3 class="card-title" style="color:#357C3C;font-family: Playball;font-weight: 900; font-size: xx-large;">Quality products</h3>
       <p class="card-text" style="color:#357C3C;font-size: larger;">Some quick example text to build on the card title
         and make up the bulk of the card's content.</p>
       <a href="#" class="btn btn-success" style="color: #fff;">Purchase Now</a>
